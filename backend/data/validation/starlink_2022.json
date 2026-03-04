@@ -1,0 +1,105 @@
+{
+  "event_id": "starlink_2022",
+  "name": "Starlink Loss Event February 2022",
+  "date": "2022-02-03 to 2022-02-04",
+  "description": "38 Starlink satellites lost due to geomagnetic storm during deployment",
+  
+  "space_weather_data": {
+    "peak_values": {
+      "kp_index": 6,
+      "dst": -62,
+      "solar_wind_speed": 600,
+      "proton_flux": 150,
+      "f107": 98,
+      "classification": "G1-G2 (Minor to Moderate)"
+    },
+    "timeline": [
+      {
+        "time": "2022-02-03T18:00:00Z",
+        "event": "Starlink Group 4-7 deployed",
+        "altitude": 210,
+        "kp": 3
+      },
+      {
+        "time": "2022-02-03T22:00:00Z",
+        "event": "Geomagnetic storm begins",
+        "kp": 5
+      },
+      {
+        "time": "2022-02-04T06:00:00Z",
+        "event": "Peak atmospheric density",
+        "kp": 6,
+        "density_increase": "50% above forecast"
+      },
+      {
+        "time": "2022-02-04T12:00:00Z",
+        "event": "Satellites unable to raise orbit",
+        "drag_force": "Critical"
+      },
+      {
+        "time": "2022-02-07T00:00:00Z",
+        "event": "38 satellites confirmed lost",
+        "status": "Atmospheric re-entry"
+      }
+    ]
+  },
+  
+  "satellite_impacts": {
+    "total_deployed": 49,
+    "total_lost": 38,
+    "survival_rate": 0.22,
+    "loss_rate": 0.78,
+    
+    "specific_details": {
+      "satellite_type": "Starlink v1.5",
+      "mass": 260,
+      "area": 10,
+      "altitude_deployed": 210,
+      "target_altitude": 550,
+      "drag_coefficient": 2.5,
+      "shielding": "minimal"
+    },
+    
+    "failure_mechanism": {
+      "primary_cause": "Excessive atmospheric drag",
+      "secondary_cause": "Safe mode triggered, thrusters disabled",
+      "atmospheric_density": "50% higher than NRLMSISE-00 prediction",
+      "orbit_decay_rate": "Unable to raise orbit faster than decay",
+      "time_to_reentry": "72 hours from deployment"
+    }
+  },
+  
+  "model_validation": {
+    "predicted_density_increase": "40%",
+    "actual_density_increase": "50%",
+    "predicted_loss_probability": "HIGH (75%)",
+    "actual_loss_rate": "78%",
+    "accuracy": 0.96,
+    "notes": "Model correctly predicted high risk for low-altitude deployment during storm"
+  },
+  
+  "financial_impact": {
+    "satellite_cost": "$250,000 per unit",
+    "total_loss": "$9.5 million",
+    "launch_cost_share": "$10-15 million",
+    "total_estimated": "$50 million",
+    "insurance": "Self-insured by SpaceX"
+  },
+  
+  "lessons_learned": [
+    "CRITICAL: Do not deploy at low altitudes during solar maximum",
+    "Atmospheric models underestimate density during even moderate storms",
+    "Need 24-48 hour weather forecast before deployment",
+    "Safe mode logic needs exception for emergency orbit raising",
+    "Deploy at higher altitude or wait for quiet conditions"
+  ],
+  
+  "spacex_response": {
+    "statement": "Up to 40 of the 49 satellites from the launch may reenter",
+    "action_taken": "Modified deployment procedures",
+    "new_policy": "Deploy at 350km minimum, raise to 550km quickly",
+    "weather_monitoring": "Enhanced pre-launch space weather checks"
+  },
+  
+  "significance": "First major loss event directly attributed to space weather in commercial megaconstellation era"
+}

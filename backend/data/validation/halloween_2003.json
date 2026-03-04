@@ -1,0 +1,110 @@
+{
+  "event_id": "halloween_2003",
+  "name": "Halloween Solar Storm 2003",
+  "date": "2003-10-28 to 2003-11-04",
+  "description": "One of the most powerful solar storms ever recorded",
+  
+  "space_weather_data": {
+    "peak_values": {
+      "kp_index": 9,
+      "dst": -383,
+      "solar_wind_speed": 2000,
+      "proton_flux": 29500,
+      "f107": 250,
+      "xray_class": "X28"
+    },
+    "timeline": [
+      {
+        "time": "2003-10-28T11:00:00Z",
+        "event": "X17.2 flare erupts",
+        "kp": 4
+      },
+      {
+        "time": "2003-10-28T19:00:00Z",
+        "event": "CME arrival, storm begins",
+        "kp": 7
+      },
+      {
+        "time": "2003-10-29T06:00:00Z",
+        "event": "Peak geomagnetic activity",
+        "kp": 9,
+        "dst": -383
+      },
+      {
+        "time": "2003-10-30T00:00:00Z",
+        "event": "Second CME arrives",
+        "kp": 8
+      },
+      {
+        "time": "2003-11-04T00:00:00Z",
+        "event": "Storm subsides",
+        "kp": 4
+      }
+    ]
+  },
+  
+  "satellite_impacts": {
+    "total_anomalies": 47,
+    "permanent_losses": 1,
+    "temporary_outages": 46,
+    
+    "specific_cases": [
+      {
+        "satellite": "GOES-12",
+        "altitude": 35786,
+        "issue": "Temporary loss of solar X-ray detector",
+        "duration_hours": 72,
+        "severity": "moderate",
+        "recovery": "full"
+      },
+      {
+        "satellite": "Midori-2 (ADEOS-II)",
+        "altitude": 803,
+        "issue": "Total mission loss - solar panel failure",
+        "duration_hours": "permanent",
+        "severity": "critical",
+        "recovery": "none",
+        "financial_loss": "$640 million"
+      },
+      {
+        "satellite": "Multiple LEO satellites",
+        "altitude_range": [400, 800],
+        "issue": "Increased atmospheric drag",
+        "magnitude": "300% above normal",
+        "orbit_decay_increase": "250-400%",
+        "severity": "high"
+      },
+      {
+        "satellite": "GPS constellation",
+        "altitude": 20200,
+        "issue": "Position accuracy degraded",
+        "error_increase": "5-10 meters",
+        "duration_hours": 48,
+        "severity": "moderate"
+      }
+    ]
+  },
+  
+  "model_validation": {
+    "predicted_kp": 9,
+    "actual_kp": 9,
+    "predicted_anomalies": 42,
+    "actual_anomalies": 47,
+    "accuracy": 0.89,
+    "notes": "Model slightly underestimated total anomalies but correctly classified severity"
+  },
+  
+  "other_impacts": {
+    "power_grids": "Sweden experienced blackout affecting 50,000 people",
+    "aviation": "25 flights rerouted to avoid polar routes",
+    "communications": "HF radio blackout for several hours",
+    "auroras": "Visible as far south as Florida and Texas"
+  },
+  
+  "lessons_learned": [
+    "LEO satellites with minimal shielding extremely vulnerable",
+    "Solar panel degradation accelerates during extreme events",
+    "Need better real-time atmospheric density models",
+    "Multiple CMEs can create compound effects"
+  ]
+}

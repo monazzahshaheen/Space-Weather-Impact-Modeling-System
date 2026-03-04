@@ -1,0 +1,200 @@
+{
+  "events": [
+    {
+      "id": "halloween_2003",
+      "name": "Halloween Solar Storm",
+      "date_start": "2003-10-28",
+      "date_end": "2003-11-04",
+      "severity": "X28",
+      "description": "One of the most powerful solar storms ever recorded",
+      "space_weather": {
+        "kp_peak": 9,
+        "dst_min": -383,
+        "solar_wind_speed_max": 2000,
+        "proton_flux_max": 29500,
+        "f107": 250
+      },
+      "impacts": {
+        "satellites_affected": 47,
+        "power_outages": "Sweden blackout",
+        "aviation_reroutes": 25,
+        "gps_degradation": "severe",
+        "communications": "HF radio blackout for hours"
+      },
+      "satellite_anomalies": [
+        {
+          "satellite": "GOES-12",
+          "issue": "Temporary loss of solar X-ray detector",
+          "duration": "72 hours"
+        },
+        {
+          "satellite": "Midori-2",
+          "issue": "Total mission loss",
+          "duration": "permanent"
+        },
+        {
+          "satellite": "Multiple LEO",
+          "issue": "Increased drag, orbit decay",
+          "magnitude": "300% above normal"
+        }
+      ]
+    },
+    {
+      "id": "carrington_1859",
+      "name": "Carrington Event",
+      "date_start": "1859-09-01",
+      "date_end": "1859-09-02",
+      "severity": "X45+",
+      "description": "The most intense geomagnetic storm in recorded history",
+      "space_weather": {
+        "kp_peak": 9,
+        "dst_min": -1760,
+        "solar_wind_speed_max": 2500,
+        "proton_flux_max": 100000,
+        "f107": 300
+      },
+      "impacts": {
+        "telegraph_systems": "Widespread failures globally",
+        "auroras": "Visible at equator",
+        "modern_estimate": "$2.6 trillion damage if occurred today"
+      }
+    },
+    {
+      "id": "st_patricks_2015",
+      "name": "St. Patrick's Day Storm",
+      "date_start": "2015-03-17",
+      "date_end": "2015-03-18",
+      "severity": "G4",
+      "description": "Strong geomagnetic storm affecting satellites and power grids",
+      "space_weather": {
+        "kp_peak": 8,
+        "dst_min": -223,
+        "solar_wind_speed_max": 700,
+        "proton_flux_max": 300,
+        "f107": 180
+      },
+      "impacts": {
+        "satellites_affected": 15,
+        "gps_degradation": "moderate",
+        "power_grid": "voltage fluctuations reported",
+        "aviation": "Polar routes rerouted"
+      },
+      "satellite_anomalies": [
+        {
+          "satellite": "Various GPS",
+          "issue": "Position errors 5-10m",
+          "duration": "8 hours"
+        }
+      ]
+    },
+    {
+      "id": "starlink_2022",
+      "name": "Starlink Loss Event",
+      "date_start": "2022-02-03",
+      "date_end": "2022-02-04",
+      "severity": "G1-G2",
+      "description": "38 Starlink satellites lost due to geomagnetic storm",
+      "space_weather": {
+        "kp_peak": 6,
+        "dst_min": -62,
+        "solar_wind_speed_max": 600,
+        "proton_flux_max": 150,
+        "f107": 98
+      },
+      "impacts": {
+        "satellites_lost": 38,
+        "financial_loss": "$50 million",
+        "atmospheric_density": "Up to 50% higher than predicted"
+      },
+      "satellite_anomalies": [
+        {
+          "satellite": "Starlink Group 4-7",
+          "issue": "Unable to raise orbit, atmospheric re-entry",
+          "duration": "permanent",
+          "altitude": 210
+        }
+      ],
+      "lessons_learned": [
+        "Low-altitude deployments highly vulnerable",
+        "Need better atmospheric density forecasting",
+        "Launch timing critical during solar maximum"
+      ]
+    },
+    {
+      "id": "bastille_day_2000",
+      "name": "Bastille Day Event",
+      "date_start": "2000-07-14",
+      "date_end": "2000-07-16",
+      "severity": "X5.7",
+      "description": "Major solar flare and CME affecting multiple satellites",
+      "space_weather": {
+        "kp_peak": 9,
+        "dst_min": -301,
+        "solar_wind_speed_max": 1200,
+        "proton_flux_max": 24000,
+        "f107": 220
+      },
+      "impacts": {
+        "satellites_affected": 10,
+        "power_systems": "Minor disruptions in northern Europe"
+      },
+      "satellite_anomalies": [
+        {
+          "satellite": "SOHO",
+          "issue": "Temporary loss of contact",
+          "duration": "36 hours"
+        },
+        {
+          "satellite": "Asiasat-1",
+          "issue": "Permanent damage to solar panels",
+          "duration": "permanent"
+        }
+      ]
+    },
+    {
+      "id": "may_1921",
+      "name": "May 1921 Geomagnetic Storm",
+      "date_start": "1921-05-13",
+      "date_end": "1921-05-16",
+      "severity": "Extreme",
+      "description": "Second most intense storm of 20th century",
+      "space_weather": {
+        "kp_peak": 9,
+        "dst_min": -907,
+        "solar_wind_speed_max": 2000,
+        "proton_flux_max": 50000,
+        "f107": 280
+      },
+      "impacts": {
+        "telegraph_systems": "Fires in control rooms",
+        "modern_estimate": "Would cause $10 billion in damage today"
+      }
+    },
+    {
+      "id": "july_2012_miss",
+      "name": "July 2012 Near Miss",
+      "date_start": "2012-07-23",
+      "date_end": "2012-07-24",
+      "severity": "X-class",
+      "description": "Carrington-class event that missed Earth by 9 days",
+      "space_weather": {
+        "kp_peak": 9,
+        "dst_min": -1200,
+        "solar_wind_speed_max": 3000,
+        "proton_flux_max": 150000,
+        "f107": 300
+      },
+      "impacts": {
+        "actual": "None - missed Earth",
+        "potential": "$2 trillion in damage, years of recovery"
+      },
+      "note": "If it had occurred one week earlier, Earth would have been directly hit"
+    }
+  ],
+  "statistics": {
+    "total_events": 7,
+    "satellites_affected_total": 110,
+    "financial_losses": "$50+ million (confirmed)",
+    "most_severe": "Carrington Event (1859)"
+  }
+}

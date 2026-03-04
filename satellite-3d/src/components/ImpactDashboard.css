@@ -1,0 +1,287 @@
+.impact-dashboard {
+  width: 400px;
+  height: 100vh;
+  overflow-y: auto;
+  background: rgba(17, 24, 39, 0.98);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 24px;
+  z-index: 15;
+}
+
+.impact-dashboard h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.impact-dashboard h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #f3f4f6;
+}
+
+.impact-dashboard h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #d1d5db;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* No Selection State */
+.no-selection {
+  text-align: center;
+  color: #9ca3af;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+/* Satellite Info */
+.satellite-info {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.satellite-info p {
+  color: #9ca3af;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* Risk Card */
+.risk-card {
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 2px solid;
+}
+
+.risk-card.risk-critical {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: #ef4444;
+}
+
+.risk-card.risk-high {
+  background: rgba(249, 115, 22, 0.1);
+  border-color: #f97316;
+}
+
+.risk-card.risk-medium {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: #f59e0b;
+}
+
+.risk-card.risk-low {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: #10b981;
+}
+
+.risk-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.risk-header h3 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.risk-score {
+  font-size: 28px;
+  font-weight: 800;
+  font-family: 'Courier New', monospace;
+}
+
+.risk-level {
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* Impact Cards */
+.impact-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.impact-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.metric .label {
+  color: #9ca3af;
+}
+
+.metric .value {
+  font-weight: 700;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+}
+
+.metric .value.sub {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.metric .value.warning {
+  color: #f59e0b;
+}
+
+/* Alerts */
+.alert {
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.alert-warning {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid #ef4444;
+  color: #fca5a5;
+}
+
+.alert-caution {
+  background: rgba(245, 158, 11, 0.2);
+  border: 1px solid #f59e0b;
+  color: #fcd34d;
+}
+
+/* Recommendations */
+.recommendations {
+  background: rgba(99, 102, 241, 0.1);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  margin-bottom: 20px;
+}
+
+.recommendations ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+}
+
+.recommendations li {
+  padding: 8px 0;
+  font-size: 13px;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+.recommendations li:before {
+  content: "→ ";
+  color: #818cf8;
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+/* Satellite List */
+.satellite-list {
+  margin-top: 24px;
+}
+
+.sat-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.sat-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(4px);
+}
+
+.sat-item.active {
+  background: rgba(102, 126, 234, 0.2);
+  border-color: #667eea;
+}
+
+.sat-name {
+  font-size: 13px;
+  color: #f3f4f6;
+  font-weight: 500;
+}
+
+.sat-risk {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sat-risk.risk-critical {
+  background: #ef4444;
+  color: #fff;
+}
+
+.sat-risk.risk-high {
+  background: #f97316;
+  color: #fff;
+}
+
+.sat-risk.risk-medium {
+  background: #f59e0b;
+  color: #fff;
+}
+
+.sat-risk.risk-low {
+  background: #10b981;
+  color: #fff;
+}
+
+/* Scrollbar */
+.impact-dashboard::-webkit-scrollbar {
+  width: 8px;
+}
+
+.impact-dashboard::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.impact-dashboard::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.impact-dashboard::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
