@@ -4,7 +4,7 @@ flask-cors==4.0.0
 flask-restful==0.3.10
 
 # Scientific Computing
-numpy>=2.0.0
+numpy==2.1.0
 scipy==1.11.0
 pandas==2.0.3
 
